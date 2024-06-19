@@ -1,12 +1,9 @@
 import { Link } from "react-router-dom";
+import Button from "./Button/Button";
 
 function CardProduct(props) {
   const { children, detail } = props;
-  return (
-    <Link to={detail}>
-      <div className="rounded-md shadow-lg flex flex-col p-3 bg-white tracking-tight">{children}</div>
-    </Link>
-  );
+  return <div className="rounded-md shadow-lg flex flex-col p-3 bg-white tracking-tight">{children}</div>;
 }
 
 function Header(props) {
@@ -29,16 +26,11 @@ function Body(props) {
 function Footer(props) {
   const { children } = props;
   return (
-    <div className="footer flex justify-between items-end mt-4">
-      <div className="color gap-1 flex flex-col">
-        <p className="text-gray-400">Color</p>
-        <div className="flex gap-1">
-          <div className="w-4 h-4 sm:w-6 sm:h-6 bg-green-500 border border-slate-900 rounded-full"></div>
-          <div className="w-4 h-4 sm:w-6 sm:h-6 bg-red-500 border border-slate-900 rounded-full"></div>
-          <div className="w-4 h-4 sm:w-6 sm:h-6 bg-blue-500 border border-slate-900 rounded-full"></div>
-        </div>
-      </div>
+    <div className="footer flex justify-between items-center mt-4">
       <h2 className="sm:text-lg font-bold text-sm">{children}</h2>
+      <Button variant="bg-blue-500" text="white" size="1/2" textSize="sm">
+        Add Cart
+      </Button>
     </div>
   );
 }

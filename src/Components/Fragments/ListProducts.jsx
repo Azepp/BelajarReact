@@ -8,7 +8,6 @@ const products = [
     price: "Rp1.000.000",
     image: "sepatu.png",
     desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem deserunt similique laudantium quae, esse amet commodi sunt consequuntur. Id, officiis aliquid? Voluptate temporibus eligendi ad!",
-    detail: "",
   },
   {
     id: 2,
@@ -16,7 +15,6 @@ const products = [
     price: "Rp2.000.000",
     image: "bw.png",
     desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem deserunt similique laudantium quae, esse amet commodi sunt consequuntur. Id, officiis aliquid? Voluptate temporibus eligendi ad!",
-    detail: "",
   },
   {
     id: 3,
@@ -24,7 +22,6 @@ const products = [
     price: "Rp2.000.000",
     image: "sepatu.png",
     desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem deserunt similique laudantium quae, esse amet commodi sunt consequuntur. Id, officiis aliquid? Voluptate temporibus eligendi ad!",
-    detail: "",
   },
   {
     id: 4,
@@ -32,7 +29,6 @@ const products = [
     price: "Rp2.000.000",
     image: "sepatu.png",
     desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem deserunt similique laudantium quae, esse amet commodi sunt consequuntur. Id, officiis aliquid? Voluptate temporibus eligendi ad!",
-    detail: "",
   },
 ];
 
@@ -42,9 +38,9 @@ function ListProducts() {
       <div className="title flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">Products</h1>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {products.map((product) => (
-          <CardProduct key={product.id} detail={product.detail}>
+          <CardProduct key={product.id}>
             <CardProduct.Header>{product.image}</CardProduct.Header>
             <CardProduct.Body name={product.name}>{product.desc}</CardProduct.Body>
             <CardProduct.Footer>{product.price}</CardProduct.Footer>
