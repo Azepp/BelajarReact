@@ -1,10 +1,10 @@
-import NavbarBefore from "../Fragments/NavbarBefore";
+import Navbar from "../Fragments/Navbar";
 
 function LandingLayouts(props) {
   const { children } = props;
   return (
     <>
-      <NavbarBefore></NavbarBefore>
+      <Navbar></Navbar>
       <div className="mx-12">{children}</div>
     </>
   );

@@ -1,10 +1,10 @@
-import NavbarAfter from "../Fragments/NavbarAfter";
+import Navbar from "../Fragments/Navbar";
 
 function AfterLayouts(props) {
   const { children } = props;
   return (
     <>
-      <NavbarAfter></NavbarAfter>
+      <Navbar></Navbar>
       <div className="mx-12 my-4">{children}</div>
     </>
   );
