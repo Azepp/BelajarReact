@@ -3,16 +3,24 @@ import InputForm from "../Elements/Input/InputForm";
 import Remember from "../Elements/Input/Remember";
 
 function FormLogin() {
-  return (
-    <form action="">
-      <InputForm label="Email" type="email" placeholder="Enter your email" name="email"></InputForm>
-      <InputForm label="Password" type="password" placeholder="Enter your password" name="password"></InputForm>
-      <Remember></Remember>
+  const handleLogin = (event) => {
+    event.preventDefault();
+    localStorage.setItem("email", event.target.email.value);
+    localStorage.setItem("password", event.target.password.value);
+    window.location.href = "/products";
+  };
 
-      <Button variant="bg-blue-500" text="white" hover="bg-blue-700" to="/products">
-        Login
-      </Button>
-    </form>
+  return (
+    <>
+      <form onSubmit={handleLogin}>
+        <InputForm label="Email" type="email" placeholder="Enter your email" name="email"></InputForm>
+        <InputForm label="Password" type="password" placeholder="Enter your password" name="password"></InputForm>
+        <Remember></Remember>
+        <Button variant="bg-blue-500" text="white" hover="bg-blue-700" type="submit" >
+          Login
+        </Button>
+      </form>
+    </>
   );
 }
 

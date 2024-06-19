@@ -1,12 +1,13 @@
 import FirstSection from "../Components/Fragments/FirstSection";
-import Products from "./Products";
+import ListProducts from "../Components/Fragments/ListProducts";
+import LandingLayouts from "../Components/Layouts/LandingLayouts";
 
 function LandingPage() {
   return (
-    <div>
+    <LandingLayouts>
       <FirstSection></FirstSection>
-      <Products></Products>
-    </div>
+      <ListProducts></ListProducts>
+    </LandingLayouts>
   );
 }
 
