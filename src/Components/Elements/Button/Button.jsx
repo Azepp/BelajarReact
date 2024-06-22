@@ -6,9 +6,7 @@ const Button = ({ children, onClick = () => {}, variant = "bg-neutral-700", text
 
   return (
     <button
-      onClick={() => {
-        onClick();
-      }}
+      onClick={onClick}
       className={`w-${size} px-6 py-2 ${variant} rounded-full text-${text} text-${textSize} hover:${hover} font-bold ${margin}`}
       type={type}
     >

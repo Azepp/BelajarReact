@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Button from "./Button/Button";
 
 function CardProduct(props) {
-  const { children, detail } = props;
+  const { children } = props;
   return <div className="rounded-md shadow-lg flex flex-col p-3 bg-white tracking-tight">{children}</div>;
 }
 
@@ -24,11 +24,11 @@ function Body(props) {
 }
 
 function Footer(props) {
-  const { children } = props;
+  const { children, handleAddCart, id } = props;
   return (
     <div className="footer flex justify-between items-center mt-4">
-      <h2 className="sm:text-lg font-bold text-sm">{children}</h2>
-      <Button variant="bg-blue-500" text="white" size="1/2" textSize="sm">
+      <h2 className="sm:text-lg font-bold text-sm">{children.toLocaleString("id-ID", { style: "currency", currency: "idr" })}</h2>
+      <Button variant="bg-blue-500" text="white" size="1/2" textSize="sm" onClick={handleAddCart(id)}>
         Add Cart
       </Button>
     </div>
