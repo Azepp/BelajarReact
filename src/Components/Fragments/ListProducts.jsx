@@ -68,6 +68,7 @@ function ListProducts() {
             </CardProduct>
           ))}
         </div>
+
         <div className="col-span-1">
           <h1 className="text-2xl font-bold mb-2">Cart</h1>
 
@@ -86,7 +87,7 @@ function ListProducts() {
                   <tr key={item.id}>
                     <td>{product.name}</td>
                     <td>{product.price.toLocaleString("id-ID", { style: "currency", currency: "idr", minimumFractionDigits: 0, maximumFractionDigits: 0 })}</td>
-                    <td>{item.qty}</td>
+                    <td className="text-center">{item.qty}</td>
                     <td>{(product.price * item.qty).toLocaleString("id-ID", { style: "currency", currency: "idr", minimumFractionDigits: 0, maximumFractionDigits: 0 })}</td>
                   </tr>
                 );
