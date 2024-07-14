@@ -1,8 +1,5 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-
+/* eslint-disable react/prop-types */
 const Button = ({ children, onClick = () => {}, variant = "bg-neutral-700", text = "neutral-50", margin, hover = "bg-neutral-900", size = "full", type, textSize }) => {
-  const navigate = useNavigate();
 
   return (
     <button

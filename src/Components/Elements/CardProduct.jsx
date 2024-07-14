@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+/* eslint-disable react/prop-types */
 import Button from "./Button/Button";
 
 function CardProduct(props) {
@@ -27,8 +27,8 @@ function Footer(props) {
   const { children, handleAddCart, id } = props;
   return (
     <div className="footer flex justify-between items-center mt-4">
-      <h2 className="sm:text-lg font-bold text-sm">{children.toLocaleString("id-ID", { style: "currency", currency: "idr" })}</h2>
-      <Button variant="bg-blue-500" text="white" size="1/2" textSize="sm" onClick={handleAddCart(id)}>
+      <h2 className="sm:text-lg font-bold text-sm">{children.toLocaleString("id-ID", { style: "currency", currency: "idr", minimumFractionDigits: 0, maximumFractionDigits: 0 })}</h2>
+      <Button variant="bg-blue-500" text="white" size="1/2" textSize="sm" onClick={() => handleAddCart(id)}>
         Add Cart
       </Button>
     </div>

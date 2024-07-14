@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 function Input(props) {
   const { type, placeholder, name } = props;
   return (

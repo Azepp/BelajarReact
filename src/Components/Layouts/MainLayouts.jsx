@@ -5,7 +5,7 @@ function AfterLayouts(props) {
   return (
     <>
       <Navbar></Navbar>
-      <div className="mx-12 my-4">{children}</div>
+      <div className="mx-8 my-4">{children}</div>
     </>
   );
 }
