@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import CardProduct from "../Elements/CardProduct";
 
 const products = [
@@ -62,6 +62,16 @@ function ListProducts() {
     }
   };
 
+  const totalPriceRef = useRef(null);
+
+  useEffect(() => {
+    if (cart.length > 0) {
+      totalPriceRef.current.style.display = "table-row";
+    } else {
+      totalPriceRef.current.style.display = "none";
+    }
+  }, [cart]);
+
   return (
     <>
       <div className="title flex justify-between items-center mb-4">
@@ -105,7 +115,7 @@ function ListProducts() {
                   </tr>
                 );
               })}
-              <tr>
+              <tr ref={totalPriceRef}>
                 <td colSpan={3} className="font-bold">
                   Total Price
                 </td>
